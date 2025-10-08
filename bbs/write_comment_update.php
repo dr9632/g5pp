@@ -1,7 +1,5 @@
 <?php
-define('G5_CAPTCHA', true);
 include_once('./_common.php');
-include_once(G5_CAPTCHA_PATH.'/captcha.lib.php');
 
 // 토큰체크
 $comment_token = trim(get_session('ss_comment_token'));
@@ -44,8 +42,6 @@ if (!empty($_POST['wr_email']))
 if ($is_guest) {
     if ($wr_name == '')
         alert('이름은 필히 입력하셔야 합니다.');
-    if(!chk_captcha())
-        alert('자동등록방지 숫자가 틀렸습니다.');
 }
 
 if ($w == "c" || $w == "cu") {

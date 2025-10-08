@@ -1,7 +1,6 @@
 <?php
 include_once('./_common.php');
 include_once(G5_LIB_PATH.'/naver_syndi.lib.php');
-include_once(G5_CAPTCHA_PATH.'/captcha.lib.php');
 
 // 토큰체크
 check_write_token($bo_table);
@@ -205,12 +204,6 @@ if ($w == '' || $w == 'u') {
 
 } else {
     alert('w 값이 제대로 넘어오지 않았습니다.');
-}
-
-$is_use_captcha = ((($board['bo_use_captcha'] && $w !== 'u') || $is_guest) && !$is_admin) ? 1 : 0;
-
-if ($is_use_captcha && !chk_captcha()) {
-    alert('자동등록방지 숫자가 틀렸습니다.');
 }
 
 if ($w == '' || $w == 'r') {

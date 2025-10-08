@@ -156,12 +156,9 @@ var char_max = parseInt(<?php echo $comment_max ?>); // 최대
             <span class="sound_only">SNS 동시등록</span>
             <span id="bo_vc_send_sns"></span>
             <?php } ?>
-            <?php if ($is_guest) { ?>
-                <?php echo $captcha_html; ?>
-            <?php } ?>
         </div>
         <div class="btn_confirm">
-        	<span class="secret_cm chk_box">
+        	<span class="secret_cm chk_box" style="clear:both">
 	            <input type="checkbox" name="wr_secret" value="secret" id="wr_secret" class="selec_chk">
 	            <label for="wr_secret"><span></span>비밀글</label>
             </span>
@@ -260,8 +257,6 @@ function fviewcomment_submit(f)
             return false;
         }
     }
-
-    <?php if($is_guest) echo chk_captcha_js();  ?>
 
     set_comment_token(f);
 

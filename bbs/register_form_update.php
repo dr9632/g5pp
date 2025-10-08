@@ -1,6 +1,5 @@
 <?php
 include_once('./_common.php');
-include_once(G5_CAPTCHA_PATH.'/captcha.lib.php');
 include_once(G5_LIB_PATH.'/register.lib.php');
 include_once(G5_LIB_PATH.'/mailer.lib.php');
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
@@ -15,10 +14,6 @@ if (!($w == '' || $w == 'u')) {
 if ($w == 'u' && $is_admin == 'super') {
     if (file_exists(G5_PATH.'/DEMO'))
         alert('데모 화면에서는 하실(보실) 수 없는 작업입니다.');
-}
-
-if (run_replace('register_member_chk_captcha', !chk_captcha(), $w)) {
-    alert('자동등록방지 숫자가 틀렸습니다.');
 }
 
 if($w == 'u')

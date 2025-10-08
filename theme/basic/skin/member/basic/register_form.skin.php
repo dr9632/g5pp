@@ -372,16 +372,6 @@ gif, jpg, png파일만 가능하며 용량 <?php echo number_format($config['cf_
 			</ul>
 		</div>
 		<?php } ?>
-
-		<div class="tbl_frm01 tbl_wrap register_form_inner">
-			<h2>자동등록방지</h2>
-			<ul>
-				<li class="is_captcha_use">
-					자동등록방지
-					<?php echo captcha_html(); ?>
-				</li>
-			</ul>
-		</div>
 	</div>
 	<div class="btn_confirm">
 	    <a href="<?php echo G5_URL ?>" class="btn_close">취소</a>
@@ -582,8 +572,6 @@ function fregisterform_submit(f)
             return false;
         }
     }
-
-    <?php echo chk_captcha_js();  ?>
 
     document.getElementById("btn_submit").disabled = "disabled";
 
