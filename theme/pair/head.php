@@ -28,7 +28,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     <div id="tnb">
     	<div class="inner">
     		<ul id="hd_define">
-    			<?php echo outlogin('theme/basic');?>
+    			<?php echo outlogin('theme/headerlog');?>
     		</ul>
 			<ul class="hd_login">        
                 <?php if ($is_member) {  ?>
