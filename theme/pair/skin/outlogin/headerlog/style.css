@@ -3,23 +3,27 @@
 /* 아웃로그인 스킨 */
 .ol {position:relative;border:0px;margin-bottom:15px;border-radius:3px;height: 85px; padding: 2px 0px; width: 370px;background-image: linear-gradient(to right, #000000, transparent);}
 .ol h2 {width:117px;float:left;padding:15px 0;text-align:center}
-.ol .join {width:116px;float:left;padding:15px 0;text-align:center;background:#f7f7f7;color:#6e6e6e}
+.ol .join {width:86px;float:right;padding:5px 0;text-align:center;background:#ff8b77;color:#fff; margin-top: 3px; margin-right: 12px; border-radius: 5px; height: 28px}
 .ol #ol_be_cate:after {display:block;visibility:hidden;clear:both;content:""}
 .ol form {padding:20px}
 .ol a.btn_admin {display:inline; padding:0 10px;height:25px;text-decoration:none;line-height:25px;vertical-align:middle} /* 관리자 전용 버튼 */
 .ol a.btn_admin:focus, .ol a.btn_admin:hover {text-decoration:none}
 .ol .login-sns{padding-bottom:0px}
+.ol .ol_form {position: absolute; width:300px; top: 0px; right: 12px; height: 28px;}
 
-#ol_before {}
+#ol_before {height: 105px;}
 #ol_before:after {display:block;visibility:hidden;clear:both;content:""}
-#ol_before .ol_wr {position:relative;margin-bottom:5px}
-#ol_id {display:block;width:100%;border:1px solid #d0d3db;padding:0 10px;height:35px;margin-bottom:5px;border-radius:3px}
-#ol_pw {display:block;width:100%;border:1px solid #d0d3db;padding:0 10px;height:35px;margin-bottom:5px;border-radius:3px}
-#ol_submit {width:100%;height:35px;background:#3a8afd;border-left:1px solid #ccc;color:#fff;font-weight:bold;font-size:1.167em;border-radius:3px}
-#ol_svc {float:right;line-height:20px}
-#ol_svc a {display:inline-block;border:1px solid #d5d9dd;color:#3a8afd;border-radius:2px;padding:2px 5px}
+#ol_before .ol_wr {position:absolute; top: 48px; margin-bottom:5px; width: 100%;}
+#ol_id {display:inline-flex; float:left; position:absolute; width:85px; border:1px solid #d0d3db; padding:0 5px; height:28px; border-radius:3px; background-color:rgba(255,255,255,0.5); color: #fff;}
+#ol_id::placeholder {color: #fff}
+#ol_pw {display:inline-flex; float:right; position:absolute; right:124px; width:85px; border:1px solid #d0d3db; padding:0 5px; height:28px; border-radius:3px; background-color:rgba(255,255,255,0.5); color: #fff;}
+#ol_pw::placeholder {color: #fff}
+#ol_submit {display:inline-flex; float:right; position:absolute; right: 30px; width:86px; height:28px; background:#ff8b77; color:#fff; font-size:1.167em;border-radius:5px}
+#ol_before .ol_auto_wr {position:absolute; top:76px; width:100%}
+#ol_svc {position:absolute; float:right; right:35px; line-height:20px}
+#ol_svc a {display:inline-block; color:#fff;padding:2px 5px}
 #ol_auto {float:left;line-height:20px;margin-top:5px}
-#ol_auto label {color:#555;vertical-align:baseline}
+#ol_auto label {color:#fff;vertical-align:baseline}
 #ol_auto input {width:13px;height:13px} 
 .ol_auto_wr:after {display:block;visibility:hidden;clear:both;content:""}
 #sns_login {margin-top:0 !important;border-top:0 !important}

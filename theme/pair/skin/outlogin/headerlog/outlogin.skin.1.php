@@ -7,18 +7,20 @@ add_stylesheet('<link rel="stylesheet" href="'.$outlogin_skin_url.'/style.css">'
 
 <!-- 로그인 전 아웃로그인 시작 { -->
 <section id="ol_before" class="ol">
-	<div id="ol_be_cate">
-    	<h2><span class="sound_only">회원</span>로그인</h2>
-    	<a href="<?php echo G5_BBS_URL ?>/register.php" class="join">회원가입</a>
-    </div>
-    <form name="foutlogin" action="<?php echo $outlogin_action_url ?>" onsubmit="return fhead_submit(this);" method="post" autocomplete="off">
+    <header id="ol_after_hd">
+        <span class="profile_img">
+            <img src="<? echo G5_IMG_URL ?>/no_profile.gif">
+        </span>
+        <strong>Guest</strong><a href="<?php echo G5_BBS_URL ?>/register.php" class="join">회원가입</a>
+    </header>
+    <form name="foutlogin" action="<?php echo $outlogin_action_url ?>" onsubmit="return fhead_submit(this);" method="post" autocomplete="off" class="ol_form">
     <fieldset>
         <div class="ol_wr">
             <input type="hidden" name="url" value="<?php echo $outlogin_url ?>">
             <label for="ol_id" id="ol_idlabel" class="sound_only">회원아이디<strong>필수</strong></label>
-            <input type="text" id="ol_id" name="mb_id" required maxlength="20" placeholder="아이디">
+            <input type="text" id="ol_id" name="mb_id" required maxlength="20" placeholder="ID">
             <label for="ol_pw" id="ol_pwlabel" class="sound_only">비밀번호<strong>필수</strong></label>
-            <input type="password" name="mb_password" id="ol_pw" required maxlength="20" placeholder="비밀번호">
+            <input type="password" name="mb_password" id="ol_pw" required maxlength="20" placeholder="PW">
             <input type="submit" id="ol_submit" value="로그인" class="btn_b02">
         </div>
         <div class="ol_auto_wr"> 
