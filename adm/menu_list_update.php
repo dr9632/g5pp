@@ -30,6 +30,7 @@ for ($i = 0; $i < $count; $i++) {
 
     $code    = is_array($_POST['code']) ? strip_tags($_POST['code'][$i]) : '';
     $me_name = is_array($_POST['me_name']) ? strip_tags($_POST['me_name'][$i]) : '';
+    $me_icon = is_array($_POST['me_icon']) ? strip_tags($_POST['me_icon'][$i]) : '';
     $me_link = (preg_match('/^javascript/i', $_POST['me_link'][$i]) || preg_match('/script:/i', $_POST['me_link'][$i])) ? G5_URL : strip_tags(clean_xss_attributes($_POST['me_link'][$i]));
 
     if (!$code || !$me_name || !$me_link) {
@@ -66,6 +67,7 @@ for ($i = 0; $i < $count; $i++) {
     $sql = " insert into {$g5['menu_table']}
                 set me_code         = '" . $me_code . "',
                     me_name         = '" . $me_name . "',
+                    me_icon         = '" . $me_icon . "',
                     me_link         = '" . $me_link . "',
                     me_target       = '" . sql_real_escape_string(strip_tags($_POST['me_target'][$i])) . "',
                     me_order        = '" . sql_real_escape_string(strip_tags($_POST['me_order'][$i])) . "',

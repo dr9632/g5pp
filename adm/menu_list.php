@@ -17,6 +17,7 @@ if (!sql_query(" DESCRIBE {$g5['menu_table']} ", false)) {
                   `me_id` int(11) NOT NULL AUTO_INCREMENT,
                   `me_code` varchar(255) NOT NULL DEFAULT '',
                   `me_name` varchar(255) NOT NULL DEFAULT '',
+                  `me_icon` varchar(255) NOT NULL DEFAULT '',
                   `me_link` varchar(255) NOT NULL DEFAULT '',
                   `me_target` varchar(255) NOT NULL DEFAULT '0',
                   `me_order` int(11) NOT NULL DEFAULT '0',
@@ -40,6 +41,7 @@ $sub_menu_info = '';
 
 <div class="local_desc01 local_desc">
     <p><strong>주의!</strong> 메뉴설정 작업 후 반드시 <strong>확인</strong>을 누르셔야 저장됩니다.</p>
+    <p>아이콘은 <a href="https://fontawesome.com/v4/icons/" taget="_blank">Font Awesome</a> 페이지를 참고하여 입력해주세요. (예시: fa-user)</p>
 </div>
 
 <form name="fmenulist" id="fmenulist" method="post" action="./menu_list_update.php" onsubmit="return fmenulist_submit(this);">
@@ -53,6 +55,7 @@ $sub_menu_info = '';
             <thead>
                 <tr>
                     <th scope="col">메뉴</th>
+                    <th scope="col">아이콘</th>
                     <th scope="col">링크</th>
                     <th scope="col">새창</th>
                     <th scope="col">순서</th>
@@ -81,6 +84,10 @@ $sub_menu_info = '';
                             <input type="hidden" name="code[]" value="<?php echo substr($row['me_code'], 0, 2) ?>">
                             <label for="me_name_<?php echo $i; ?>" class="sound_only"><?php echo $sub_menu_info; ?> 메뉴<strong class="sound_only"> 필수</strong></label>
                             <input type="text" name="me_name[]" value="<?php echo get_sanitize_input($me_name); ?>" id="me_name_<?php echo $i; ?>" required class="required tbl_input full_input">
+                        </td>
+                        <td class="td_category<?php echo $sub_menu_class; ?>">
+                            <label for="me_icon_<?php echo $i; ?>" class="sound_only"><?php echo $sub_menu_info; ?> 아이콘</label>
+                            <input type="text" name="me_icon[]" value="<?php echo $row['me_icon']; ?>" id="me_icon_<?php echo $i; ?>" class="tbl_input full_input">
                         </td>
                         <td>
                             <label for="me_link_<?php echo $i; ?>" class="sound_only">링크<strong class="sound_only"> 필수</strong></label>

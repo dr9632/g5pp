@@ -961,6 +961,7 @@ CREATE TABLE IF NOT EXISTS `g5_menu` (
   `me_id` int(11) NOT NULL AUTO_INCREMENT,
   `me_code` varchar(255) NOT NULL DEFAULT '',
   `me_name` varchar(255) NOT NULL DEFAULT '',
+  `me_icon` varchar(255) NOT NULL DEFAULT '',
   `me_link` varchar(255) NOT NULL DEFAULT '',
   `me_target` varchar(255) NOT NULL DEFAULT '',
   `me_order` int(11) NOT NULL DEFAULT '0',

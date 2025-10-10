@@ -145,6 +145,10 @@ if ($new == 'new' || !$code) {
         list += "<input type=\"hidden\" name=\"code[]\" value=\"<?php echo $code; ?>\">";
         list += "<input type=\"text\" name=\"me_name[]\" value=\"" + name + "\" id=\"me_name_" + ms + "\" required class=\"required frm_input full_input\">";
         list += "</td>";
+        list += "<td" + sub_menu_class + ">";
+        list += "<label for=\"me_icon_" + ms + "\"  class=\"sound_only\">링크</label>";
+        list += "<input type=\"text\" name=\"me_icon[]\" id=\"me_icon_" + ms + "\" class=\"frm_input full_input\">";
+        list += "</td>";
         list += "<td>";
         list += "<label for=\"me_link_" + ms + "\"  class=\"sound_only\">링크<strong class=\"sound_only\"> 필수</strong></label>";
         list += "<input type=\"text\" name=\"me_link[]\" value=\"" + link + "\" id=\"me_link_" + ms + "\" required class=\"required frm_input full_input\">";
