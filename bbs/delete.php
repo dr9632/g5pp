@@ -139,6 +139,7 @@ if ($count_write > 0 || $count_comment > 0)
 @include_once($board_skin_path.'/delete.tail.skin.php');
 
 delete_cache_latest($bo_table);
+delete_cache_latest('all');
 
 run_event('bbs_delete', $write, $board);
 
