@@ -329,6 +329,8 @@ CREATE TABLE IF NOT EXISTS `g5_config` (
   `cf_captcha` varchar(100) NOT NULL DEFAULT '',
   `cf_recaptcha_site_key` varchar(100) NOT NULL DEFAULT '',
   `cf_recaptcha_secret_key` varchar(100) NOT NULL DEFAULT '',
+  `cf_public` tinyint(4) NOT NULL DEFAULT '0',
+  `cf_open_register` tinyint(4) NOT NULL DEFAULT '0',
   `cf_1_subj` varchar(255) NOT NULL DEFAULT '',
   `cf_2_subj` varchar(255) NOT NULL DEFAULT '',
   `cf_3_subj` varchar(255) NOT NULL DEFAULT '',
@@ -966,3 +968,21 @@ CREATE TABLE IF NOT EXISTS `g5_menu` (
   `me_mobile_use` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`me_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `g5_character`
+--
+
+DROP TABLE IF EXISTS `g5_character`;
+CREATE TABLE IF NOT EXISTS `g5_character` (
+  `ch_id` int(11) NOT NULL AUTO_INCREMENT,
+  `ch_name` varchar(255) NOT NULL DEFAULT '',
+  `mb_id` varchar(255) NOT NULL DEFAULT '',
+  `ch_thumb` varchar(255) NOT NULL DEFAULT '',
+  `ch_head` varchar(255) NOT NULL DEFAULT '',
+  `ch_body` varchar(255) NOT NULL DEFAULT '',
+  `ch_state` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`ch_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
