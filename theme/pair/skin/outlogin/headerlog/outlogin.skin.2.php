@@ -24,6 +24,11 @@ add_stylesheet('<link rel="stylesheet" href="'.$outlogin_skin_url.'/style.css">'
             </a>
         </li>
         <li>
+            <a href="<?php echo G5_BBS_URL ?>/scrap.php" target="_blank" id="ol_after_scrap" class="win_mypage">
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
             <a href="<?php echo G5_BBS_URL ?>/scrap.php" target="_blank" id="ol_after_scrap" class="win_scrap">
                 <i class="fa fa-thumb-tack" aria-hidden="true"></i>
             </a>
