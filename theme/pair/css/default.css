@@ -203,6 +203,7 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
   50%{width: 0;}
   100%{ width: 100; }
 }
+.char_option {position: fixed; float: left; left: 12px; bottom: 12px; background-color: #fff;}
 
 /* 하단 레이아웃 */
 #ft {background:#212020;margin:0 auto;text-align:center}

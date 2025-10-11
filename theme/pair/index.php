@@ -29,5 +29,11 @@ include_once(G5_THEME_PATH.'/head.php');
     </div>
 </div>
 
+<div class="main_select_char">
+    <div class="char_option">
+        메인 노출 캐릭터 선택 버튼 위치<br/>(버튼이 될 수도 드롭다운이 될수도..)
+    </div>
+</div>
+
 <?php
 include_once(G5_THEME_PATH.'/tail.php');
