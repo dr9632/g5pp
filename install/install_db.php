@@ -361,7 +361,8 @@ $dir_arr = array (
     $data_path.'/session',
     $data_path.'/content',
     $data_path.'/faq',
-    $data_path.'/tmp'
+    $data_path.'/tmp',
+    $data_path.'/character'
 );
 
 for ($i=0; $i<count($dir_arr); $i++) {

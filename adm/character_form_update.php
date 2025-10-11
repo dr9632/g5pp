@@ -21,8 +21,10 @@ if(!$mb['mb_id']) {
 $character_image_path = G5_DATA_PATH."/character/".$mb_id;
 $character_image_url = G5_DATA_URL."/character/".$mb_id;
 
+// 캐릭터 디렉토리 생성
 @mkdir($character_image_path, G5_DIR_PERMISSION);
 @chmod($character_image_path, G5_DIR_PERMISSION);
+
 
 $mb_id = isset($_POST['mb_id']) ? trim($_POST['mb_id']) : '';
 $ch_name = isset($_POST['ch_name']) ? trim(strip_tags($_POST['ch_name'])) : '';
