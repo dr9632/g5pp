@@ -7,13 +7,11 @@ if (!defined('_GNUBOARD_')) exit;
 **
 *************************************************************************/
 
-// 캐릭터 정보 추출
+// 캐릭터 기본 정보 가져오기
 function get_character($ch_id)
 {
-    global $g5;
-
-    $sql = " SELECT * from {$g5['character_table']} where ch_id = $ch_id and ch_state != '삭제'");
-    $row = sql_fetch($sql, false);
-
-    return $row
+	global $g5;
+	$character = sql_fetch("select * from {$g5['character_table']} where ch_id = '{$ch_id}'");
+	
+	return $character;
 }

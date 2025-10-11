@@ -492,6 +492,7 @@ DROP TABLE IF EXISTS `g5_member`;
 CREATE TABLE IF NOT EXISTS `g5_member` (
   `mb_no` int(11) NOT NULL auto_increment,
   `mb_id` varchar(20) NOT NULL default '',
+  `ch_id` int(11) NOT NULL default '0',
   `mb_password` varchar(255) NOT NULL default '',
   `mb_name` varchar(255) NOT NULL default '',
   `mb_nick` varchar(255) NOT NULL default '',
