@@ -14,6 +14,9 @@ include_once(G5_LIB_PATH.'/poll.lib.php');
 include_once(G5_LIB_PATH.'/visit.lib.php');
 include_once(G5_LIB_PATH.'/connect.lib.php');
 include_once(G5_LIB_PATH.'/popular.lib.php');
+include_once(G5_LIB_PATH.'/character.lib.php');
+
+$ch_array = get_character_list();
 ?>
 
 <!-- 상단 시작 { -->

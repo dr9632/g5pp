@@ -31,7 +31,14 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <div class="main_select_char">
     <div class="char_option">
-        메인 노출 캐릭터 선택 버튼 위치<br/>(버튼이 될 수도 드롭다운이 될수도..)
+        <select name="ch_id" id="ch_id" class="char_dropdown_list">
+			<option value="">메인캐릭터 선택</option>
+            <?	for($i = 0; $i < count($ch_array); $i++) { $ch = $ch_array[$i]; ?>
+			    <option value="<?=$ch['ch_id']?>" <?=$member['ch_id'] == $ch['ch_id'] ? "selected" : ""?>>
+				<?=$ch['ch_name']?>
+			</option>
+		<? } ?>
+        </select>
     </div>
 </div>
 

@@ -203,7 +203,8 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
   50%{width: 0;}
   100%{ width: 100; }
 }
-.char_option {position: fixed; float: left; left: 12px; bottom: 12px; background-color: #fff;}
+.main_select_char {position: fixed; float: left; left: 16px; bottom: 58px; background-color: rgba(0,0,0,0.2);}
+.char_dropdown_list {background-color: rgba(0,0,0,0.8); color:#fff; border:#fff 1px solid;}
 
 /* 하단 레이아웃 */
 #ft {background:#212020;margin:0 auto;text-align:center}
