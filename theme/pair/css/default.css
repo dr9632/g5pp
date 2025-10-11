@@ -45,7 +45,7 @@ border:1px solid #558ab7 !important;
 .placeholdersjs {color:#aaa !important}
 
 /* 레이아웃 크기 지정 */
-#hd, #wrapper, #ft {min-width:1200px}
+#hd, #wrapper, #ft {min-width:900px}
 
 #hd_pop,
 #hd_wrapper,
@@ -177,7 +177,7 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
 /* 중간 레이아웃 */
 #wrapper {padding-top: 120px;}
 #container_wr:after {display:block;visibility:hidden;clear:both;content:""}
-#container_wr {margin:0 auto;zoom:1}
+#container_wr {margin:0;zoom:1; width: 100%}
 #aside {float:right;width:235px;padding:0;height:100%;margin:20px 0 20px 20px}
 
 #container {position:relative;float:left;min-height:500px;height:auto !important;margin:20px 0;font-size:1em;width:100%;zoom:1}
@@ -193,9 +193,9 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
 .latest_top_wr:after {display:block;visibility:hidden;clear:both;content:""}
 
 .main_visual {width:100%; text-align: center; display: flex; justify-content: center;}
-.main_contents {float:right; display: block; width:450px; position:absolute; top: 0px; right:6px;}
+.main_contents {float:right; display: block; width:450px; position:absolute; top: 0px; right:4vw;}
 .char_layer {width: 100%; max-height: 50vh; overflow: clip; padding-right: 42px}
-.char_line {position: absolute; max-width: 80vw; margin-right: 67px; top: 30vh; background-color: rgba(0,0,0,0.8); color:  #fff; padding: 20px 25px; border: #fff 1px solid; border-radius: 5px;}
+.char_line {position: absolute; max-width: 50vw; margin-right: 67px; top: 35vh; background-color: rgba(0,0,0,0.8); color:  #fff; padding: 20px 25px; border: #fff 1px solid; border-radius: 5px;}
 .char_line p {animation: type 4s steps{0,end}}
 @keyframes type{
   0%{width: 0;}

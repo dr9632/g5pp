@@ -25,7 +25,7 @@ include_once(G5_THEME_PATH.'/head.php');
         <?php
         echo latest_all('theme/new_contents','전체게시판',10,24,array('notice'));
         ?>
-        <!-- } 최신글 끝 -->
+    <!-- } 최신글 끝 -->
     </div>
 </div>
 
