@@ -120,7 +120,7 @@ border:1px solid #558ab7 !important;
 
 
 /* 메인메뉴 */
-#gnb {position:absolute; top:120px; width:220px; background:transparent}
+#gnb {position:absolute; top:150px; width:220px; background:transparent}
 #gnb > h2 {position:absolute;font-size:0;line-height:0;overflow:hidden}
 #gnb .gnb_wrap {margin:0;position:relative;width:100%}
 #gnb .gnb_wrap:hover, #gnb .gnb_wrap:focus, #gnb .gnb_wrap:active{z-index:3}
@@ -194,8 +194,9 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
 
 .main_visual {width:100%; text-align: center; display: flex; justify-content: center;}
 .main_contents {float:right; display: block; width:450px; position:absolute; top: 0px; right:4vw;}
-.char_layer {width: 100%; max-height: 50vh; overflow: clip; padding-right: 42px}
-.char_line {position: absolute; max-width: 50vw; margin-right: 67px; top: 35vh; background-color: rgba(0,0,0,0.8); color:  #fff; padding: 20px 25px; border: #fff 1px solid; border-radius: 5px;}
+.char_layer {width: 100%; min-height: 50vh; height: calc(100vh - 210px); overflow: clip; padding-right: 42px}
+.char_layer img {width:77%; height:auto; transform:translateY(-60px); mask-image:linear-gradient(#000 70vh, transparent 87vh);}
+.char_line {position: absolute; max-width: 50vw; margin-right: 67px; top: 55vh; background-color: rgba(0,0,0,0.8); color:  #fff; padding: 20px 25px; border: #fff 1px solid; border-radius: 5px;}
 .char_line p {animation: type 4s steps{0,end}}
 @keyframes type{
   0%{width: 0;}
