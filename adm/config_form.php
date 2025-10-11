@@ -499,18 +499,6 @@ if (!$config['cf_icode_server_port']) {
                 </colgroup>
                 <tbody>
                     <tr>
-                        <th scope="row"><label for="cf_title">홈페이지 제목<strong class="sound_only">필수</strong></label></th>
-                        <td><input type="text" name="cf_title" value="<?php echo get_sanitize_input($config['cf_title']); ?>" id="cf_title" required class="required frm_input" size="40"></td>
-                        <th scope="row"><label for="cf_public_config">공개 설정</label></th>
-                        <td>
-                            <input type="checkbox" name="cf_public" value="1" id="cf_public" <?php echo $config['cf_public']?'checked':''; ?>>
-				            <label for="cf_public">사이트공개</label>
-                            &nbsp;&nbsp;
-                            <input type="checkbox" name="cf_open_register" value="1" id="cf_open_register" <?php echo $config['cf_open_register']?'checked':''; ?>>
-                            <label for="cf_open_register">계정생성 가능</label>
-                        </td>
-                    </tr>
-                    <tr>
                         <th scope="row"><label for="cf_admin">최고관리자<strong class="sound_only">필수</strong></label></th>
                         <td colspan="3"><?php echo get_member_id_select('cf_admin', 10, $config['cf_admin'], 'required') ?></td>
                     </tr>
