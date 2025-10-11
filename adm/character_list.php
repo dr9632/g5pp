@@ -73,6 +73,7 @@ $colspan = 4;
     <input type="hidden" name="stx" value="<?php echo $stx ?>">
     <input type="hidden" name="page" value="<?php echo $page ?>">
     <input type="hidden" name="token" value="<?php echo isset($token) ? $token : ''; ?>">
+    <input type="hidden" name="ch_id" value="<?php echo $ch_id ?>">
 
     <div class="tbl_head01 tbl_wrap">
         <table>
@@ -92,7 +93,7 @@ $colspan = 4;
                 <?php
                 for ($i = 0; $row = sql_fetch_array($result); $i++) {
                     $one_update = '<a href="./character_form.php?w=u&amp;ch_id=' . $row['ch_id'] . '&amp;' . $qstr . '" class="btn btn_03">수정</a>';
-                    $one_delete = '<a href="./character_delete.php?ch_id=' . $row['ch_id'] . '" class="board_copy btn btn_02" target="win_board_copy">삭제</a>';
+                    $one_delete = '<a href="./character_delete.php?ch_id=' . $row['ch_id'] . '" class="board_copy btn btn_02">삭제</a>';
 
                     $bg = 'bg' . ($i % 2);
                 ?>
