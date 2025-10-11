@@ -331,6 +331,7 @@ CREATE TABLE IF NOT EXISTS `g5_config` (
   `cf_recaptcha_secret_key` varchar(100) NOT NULL DEFAULT '',
   `cf_public` tinyint(4) NOT NULL DEFAULT '0',
   `cf_open_register` tinyint(4) NOT NULL DEFAULT '0',
+  `cf_bgm` varchar(255) NOT NULL DEFAULT '',
   `cf_1_subj` varchar(255) NOT NULL DEFAULT '',
   `cf_2_subj` varchar(255) NOT NULL DEFAULT '',
   `cf_3_subj` varchar(255) NOT NULL DEFAULT '',
