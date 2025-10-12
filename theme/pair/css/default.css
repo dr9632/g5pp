@@ -204,7 +204,42 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
   100%{ width: 100; }
 }
 .main_select_char {position: fixed; float: left; left: 16px; bottom: 58px; background-color: rgba(0,0,0,0.2);}
-.char_dropdown_list {background-color: rgba(0,0,0,0.8); color:#fff; border:#fff 1px solid;}
+.char_dropdown_list {background-color: rgba(0,0,0,0.8); color:#fff; padding:4px 0; border:#fff 1px solid;}
+.char_btn {background-color: #ff8b77; color:#fff; font-weight: bold; padding: 5px 8px;}
+.loader_layer {display: grid; place-content: center; color:#fff; font-weight:bold; font-size: 21px;}
+/* https://css-loaders.com/spinner/ */
+.loader {
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 20px solid #0000;
+  border-radius: 50%;
+  border-color: #ccc #0000;
+  animation: l16 3s infinite linear;
+}
+.loader::before,
+.loader::after {    
+  content: "";
+  grid-area: 1/1;
+  margin: 10px;
+  border: inherit;
+  border-radius: 50%;
+  animation-duration: 6s;
+}
+.loader::before {
+  border-color: #ff8b77 #0000;
+  animation: inherit; 
+  animation-duration: 1.5s;
+  animation-direction: reverse;
+}
+.loader::after {
+  margin: 40px;
+}
+@keyframes l16 { 
+  100%{transform: rotate(1turn)}
+}
 
 /* 하단 레이아웃 */
 #ft {background:#212020;margin:0 auto;text-align:center}

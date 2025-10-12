@@ -18,6 +18,8 @@ include_once(G5_LIB_PATH.'/character.lib.php');
 include_once(G5_LIB_PATH.'/character_line.lib.php');
 
 $ch_array = get_character_list();
+if ($is_member)
+    $ch = get_character($member['ch_id']);
 ?>
 
 <!-- 상단 시작 { -->

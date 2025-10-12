@@ -36,5 +36,4 @@ function get_character_list() {
 
 	return $character;
 }
-
 ?>
