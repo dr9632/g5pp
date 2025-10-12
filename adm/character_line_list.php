@@ -1,6 +1,7 @@
 <?php
 $sub_menu = "400200";
 require_once './_common.php';
+include_once(G5_LIB_PATH.'/character_line.lib.php');
 
 auth_check_menu($auth, $sub_menu, 'r');
 
@@ -47,7 +48,6 @@ $colspan = 4;
 // 추가 테이블 설치 여부 확인 (테이블조회)
 $ch_line = sql_fetch(" select COUNT(*) AS cnt FROM information_schema.TABLES WHERE `TABLE_NAME` = 'dr_charline' AND TABLE_SCHEMA = '".G5_MYSQL_DB."' ");
 $is_ch_line = $ch_line['cnt'];
-
 ?>
 
 <?php if($is_ch_line > 0) { ?>
@@ -92,7 +92,7 @@ $is_ch_line = $ch_line['cnt'];
             <tbody>
                 <?php
                 for ($i = 0; $row = sql_fetch_array($result); $i++) {
-                    $one_update = '<a href="./character_form.php?w=u&amp;ch_id=' . $row['ch_id'] . '&amp;' . $qstr . '" class="btn btn_03">수정</a>';
+                    $one_update = '<a href="./character_line_form.php?w=&amp;ch_id=' . $row['ch_id'] . '&amp;' . $qstr . '" class="btn btn_03">조회</a>';
 
                     $bg = 'bg' . ($i % 2);
                 ?>
@@ -107,11 +107,10 @@ $is_ch_line = $ch_line['cnt'];
                             <?php echo $row['mb_id'] ?>
                         </td>
                         <td>
-                            대사수 출력
+                            <?php echo get_character_line_cnt($row['ch_id']); ?>
                         </td>
                         <td class="td_mng td_mng_m">
                             <?php echo $one_update ?>
-                            <?php echo $one_delete ?>
                         </td>
                     </tr>
                 <?php
@@ -123,14 +122,6 @@ $is_ch_line = $ch_line['cnt'];
             </tbody>
         </table>
     </div>
-
-    <div class="btn_fixed_top">
-        <?php if ($is_admin == 'super') { ?>
-            <input type="submit" name="act_button" value="선택삭제" onclick="document.pressed=this.value" class="btn_02 btn">
-            <a href="./character_form.php" id="ch_add" class="btn_01 btn">캐릭터 추가</a>
-        <?php } ?>
-    </div>
-
 </form>
 
 <?php echo get_paging(G5_IS_MOBILE ? $config['cf_mobile_pages'] : $config['cf_write_pages'], $page, $total_page, $_SERVER['SCRIPT_NAME'] . '?' . $qstr . '&amp;page='); ?>
