@@ -15,7 +15,11 @@ include_once(G5_THEME_PATH.'/head.php');
         <img src="<? echo G5_THEME_IMG_URL.'/1207(1).png' ?>"/>
     </div> 
     <div class="char_line">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed consequat lorem, sed eleifend elit. Mauris nisl nulla, iaculis id tristique sit amet, volutpat suscipit urna. Etiam egestas aliquet tincidunt. Curabitur ac venenatis velit. Praesent blandit id nulla ut ullamcorper. Suspendisse potenti. Quisque suscipit venenatis odio lacinia tempor. Suspendisse tincidunt arcu vitae magna pulvinar viverra ut at sem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus scelerisque et ipsum nec mollis. Fusce elit neque, aliquet ut tortor in, iaculis rhoncus leo. Mauris tempor lectus convallis purus commodo fringilla.</p>
+        <p>
+            <?php 
+                echo get_rand_character_line(6);
+            ?>
+        </p>
     </div>
 </div>
 <div class="main_contents">

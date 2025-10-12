@@ -15,6 +15,7 @@ include_once(G5_LIB_PATH.'/visit.lib.php');
 include_once(G5_LIB_PATH.'/connect.lib.php');
 include_once(G5_LIB_PATH.'/popular.lib.php');
 include_once(G5_LIB_PATH.'/character.lib.php');
+include_once(G5_LIB_PATH.'/character_line.lib.php');
 
 $ch_array = get_character_list();
 ?>

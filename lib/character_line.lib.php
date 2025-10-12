@@ -37,15 +37,17 @@ function get_character_line($ch_id='',$cl_id='') {
 // 캐릭터 랜덤 대사 가져오기
 // (변수 지정되지 않았을 시 전체를 불러옴)
 function get_rand_character_line($ch_id='') {
-	$sql_common = "select * from dr_charline order by rand() limit 1";
+	$sql_common = "select * from dr_charline";
+
 	if($ch_id) {
 		$sql_common .= " where ch_id = '{$ch_id}'";
 	}
 
+	// 1개의 대사만 가져오도록 제한
+	$sql_common .= " order by rand() limit 1";
 	$result = sql_query($sql_common);
-	for($i=0; $row=sql_fetch_array($result); $i++) {
-		$cl_line[] = $row;
-	}
+
+	$cl_line = sql_fetch_array($result);
 
 	return $cl_line['cl_text'];
 }
