@@ -361,7 +361,8 @@ $dir_arr = array (
     $data_path.'/session',
     $data_path.'/content',
     $data_path.'/faq',
-    $data_path.'/tmp'
+    $data_path.'/tmp',
+    $data_path.'/character'
 );
 
 for ($i=0; $i<count($dir_arr); $i++) {
@@ -427,6 +428,9 @@ fwrite($f, "\$g5['new_win_table'] = G5_TABLE_PREFIX.'new_win'; // 새창 테이�
 fwrite($f, "\$g5['menu_table'] = G5_TABLE_PREFIX.'menu'; // 메뉴관리 테이블\n");
 fwrite($f, "\$g5['social_profile_table'] = G5_TABLE_PREFIX.'member_social_profiles'; // 소셜 로그인 테이블\n");
 fwrite($f, "\$g5['member_cert_history_table'] = G5_TABLE_PREFIX.'member_cert_history'; // 본인인증 변경내역 테이블\n");
+
+// 여기서부터 추가 테이블
+fwrite($f, "\$g5['character_table'] = G5_TABLE_PREFIX.'character'; // 캐릭터 테이블\n");
 
 fwrite($f, "?>");
 

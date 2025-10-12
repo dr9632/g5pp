@@ -13,7 +13,6 @@ if ($is_admin != 'super') {
 $sql = " select * from {$g5['config_table']} limit 1";
 $ori_config = sql_fetch($sql);
 
-$cf_title = isset($_POST['cf_title']) ? strip_tags(clean_xss_attributes($_POST['cf_title'])) : '';
 $cf_admin = isset($_POST['cf_admin']) ? clean_xss_tags($_POST['cf_admin'], 1, 1) : '';
 
 $mb = get_member($cf_admin);
@@ -217,8 +216,7 @@ if ($check_captcha) {
 }
 
 $sql = " update {$g5['config_table']}
-            set cf_title = '{$cf_title}',
-                cf_admin = '{$cf_admin}',
+            set cf_admin = '{$cf_admin}',
                 cf_admin_email = '{$_POST['cf_admin_email']}',
                 cf_admin_email_name = '{$_POST['cf_admin_email_name']}',
                 cf_add_script = '{$_POST['cf_add_script']}',
