@@ -3,6 +3,8 @@ $sub_menu = "400100";
 require_once "./_common.php";
 include_once(G5_LIB_PATH.'/character.lib.php');
 
+auth_check($auth[$sub_menu], 'd');
+
 if (!defined('_GNUBOARD_')) {
     exit;
 }
@@ -20,6 +22,9 @@ if (!(isset($ch['ch_id']))) {
 	@unlink($prev_file_path);
 
 	$sql = " delete from {$g5['character_table']} where  ch_id = '{$ch['ch_id']}' ";
+	sql_query($sql);
+
+	$sql = " delete from dr_charline where  ch_id = '{$ch['ch_id']}' ";
 	sql_query($sql);
 
     $sql = " update {$g5['member_table']}
