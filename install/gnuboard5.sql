@@ -988,3 +988,24 @@ CREATE TABLE IF NOT EXISTS `g5_character` (
   `ch_state` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`ch_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `g5_call_table`
+--
+
+DROP TABLE IF EXISTS `g5_call_table`;
+CREATE TABLE IF NOT EXISTS `g5_call_table` (
+  `bc_id` int(11) NOT NULL AUTO_INCREMENT,
+  `bo_table` varchar(255) NOT NULL DEFAULT '',
+  `wr_id` int(11) NOT NULL DEFAULT '0',
+  `wr_num` int(11) NOT NULL DEFAULT '0',
+  `mb_id` varchar(255) NOT NULL DEFAULT '',
+  `mb_name` varchar(255) NOT NULL DEFAULT '',
+  `re_mb_id` varchar(255) NOT NULL DEFAULT '',
+  `bc_text` text NOT NULL,
+  `bc_datetime` datetime NOT NULL default '0000-00-00 00:00:00',
+  `wr_id` int(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`bc_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;

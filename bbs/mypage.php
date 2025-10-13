@@ -77,7 +77,7 @@ include_once('./_head.php');
 
             <?php
             $sql = " select *
-                       from {$g5['g5_call_table']}
+                      from {$g5['call_table']}
                       where re_mb_id = '{$member['mb_id']}'
                       order by bc_datetime desc
                       limit 0, 8 ";

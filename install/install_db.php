@@ -431,6 +431,7 @@ fwrite($f, "\$g5['member_cert_history_table'] = G5_TABLE_PREFIX.'member_cert_his
 
 // 여기서부터 추가 테이블
 fwrite($f, "\$g5['character_table'] = G5_TABLE_PREFIX.'character'; // 캐릭터 테이블\n");
+fwrite($f, "\$g5['call_table'] = G5_TABLE_PREFIX.'call_table'; // 호출 테이블\n");
 
 fwrite($f, "?>");
 
