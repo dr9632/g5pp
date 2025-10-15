@@ -16,17 +16,26 @@ function get_character($ch_id)
 	return $character;
 }
 
+function get_mem_character($mb_id)
+{
+	global $g5;
+	$character = sql_fetch("select * from {$g5['character_table']} where mb_id = '{$mb_id}'");
+	
+	return $character;
+}
+
 // 캐릭터 목록 가져오기
-function get_character_list() {
+// 변수 지정되지 않았을 시 전체를 불러옴)
+function get_character_list($mb_id='') {
 	global $g5;
 
 	$character = array();
 
-	// $sql_search = '';
-
 	$sql_common = "select *
-			from	{$g5['character_table']}
-			order by ch_id asc";
+			from	{$g5['character_table']}";
+	if($mb_id)
+		$sql_common .= " where mb_id = '{$mb_id}'";
+	$sql_common .= " order by ch_id asc";
 
 	$result = sql_query($sql_common);
 

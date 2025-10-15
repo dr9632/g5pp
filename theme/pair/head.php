@@ -84,12 +84,11 @@ if ($is_member)
     <script>
     
     $(function(){
-        $(".gnb_menu_btn").click(function(){
-            $("#gnb_all, #gnb_all_bg").show();
-        });
-        $(".gnb_close_btn, #gnb_all_bg").click(function(){
-            $("#gnb_all, #gnb_all_bg").hide();
-        });
+        $('#nav').hover(function(){
+            $(this).animate({width:'220px'},500);
+        },function(){
+            $(this).animate({width:'35px'},500);
+        }).trigger('mouseleave');
     });
 
     </script>
@@ -102,6 +101,4 @@ if ($is_member)
 <!-- 콘텐츠 시작 { -->
 <div id="wrapper">
     <div id="container_wr">
-   
-    <div id="container">
         <?php if (!defined("_INDEX_")) { ?><h2 id="container_title"><span title="<?php echo get_text($g5['title']); ?>"><?php echo get_head_title($g5['title']); ?></span></h2><?php }

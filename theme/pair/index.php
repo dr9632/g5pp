@@ -19,7 +19,7 @@ include_once(G5_THEME_PATH.'/head.php');
             로그인하거나 메인페이지 캐릭터를 설정해주세요.
         <? } ?>
     </div>
-    <?php if ($is_member && $member['ch_id']) { ?>
+    <?php if ($is_member && $member['ch_id'] && get_character_line_cnt($ch['ch_id'])>0) { ?>
     <div class="char_line">
         <p>
             <?php echo get_rand_character_line($ch['ch_id']) ?>

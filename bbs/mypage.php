@@ -4,9 +4,6 @@ include_once('./_common.php');
 if (!$is_member)
     goto_url(G5_BBS_URL."/login.php?url=".urlencode(G5_BBS_URL."/mypage.php"));
 
-// 읽지 않은 쪽지수
-$memo_not_read = isset($member['mb_memo_cnt']) ? (int) $member['mb_memo_cnt'] : 0;
-
 if (G5_IS_MOBILE) {
     include_once(G5_MOBILE_PATH.'/mypage.php');
     return;
@@ -41,7 +38,7 @@ include_once('./_head.php');
         <div id="smb_my_act">
             <ul>
                 <?php if ($is_admin == 'super') { ?><li><a href="<?php echo G5_ADMIN_URL; ?>/" class="btn_admin">관리자</a></li><?php } ?>
-                <li><a href="<?php echo G5_BBS_URL; ?>/memo.php" target="_blank" class="win_memo btn01">쪽지함</a></li>
+                <li><a href="<?php echo G5_BBS_URL; ?>/character.php" class="btn01">보유 캐릭터</a></li>
                 <li><a href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=register_form.php" class="btn01">회원정보수정</a></li>
                 <li><a href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=member_leave.php" onclick="return member_leave();" class="btn01">회원탈퇴</a></li>
             </ul>
@@ -95,7 +92,7 @@ include_once('./_head.php');
         </div>
 
         <div class="smb_my_more">
-            <a href="./wishlist.php">더보기</a>
+            <!-- <a href="./wishlist.php">더보기</a> -->
         </div>
     </section>
     <!-- } 최근 호출 내역 끝 -->
