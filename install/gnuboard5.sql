@@ -1007,6 +1007,6 @@ CREATE TABLE IF NOT EXISTS `g5_call_table` (
   `re_mb_id` varchar(255) NOT NULL DEFAULT '',
   `bc_text` text NOT NULL,
   `bc_datetime` datetime NOT NULL default '0000-00-00 00:00:00',
-  `wr_id` int(4) NOT NULL DEFAULT '0',
+  `bc_check` int(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`bc_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
