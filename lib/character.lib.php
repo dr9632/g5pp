@@ -45,4 +45,24 @@ function get_character_list($mb_id='') {
 
 	return $character;
 }
+// 캐릭터 삭제
+function character_delete($ch_id)
+{
+    global $config;
+    global $g5;
+
+    $sql = " select ch_id from {$g5['character_table']} where ch_id= '".$ch_id."' ";
+    $ch = sql_fetch($sql);
+
+    // 캐릭터와 연결된 대사 삭제
+	sql_query(" delete from dr_charline where ch_id = '$ch_id' ");
+
+    // 디렉토리 삭제
+    @unlink(G5_DATA_PATH.'/character/'.$ch_id);
+
+	// 캐릭터 삭제
+	sql_query(" delete from {$g5['character_table']} where ch_id = '$ch_id' ");
+
+    run_event('character_delete_after', $ch_id);
+}
 ?>

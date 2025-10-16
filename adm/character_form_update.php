@@ -18,8 +18,8 @@ if(!$mb['mb_id']) {
 	alert('존재하지 않는 회원 정보 입니다.');
 }
 
-$character_image_path = G5_DATA_PATH."/character/".$mb_id;
-$character_image_url = G5_DATA_URL."/character/".$mb_id;
+$character_image_path = G5_DATA_PATH."/character/".$ch_id;
+$character_image_url = G5_DATA_URL."/character/".$ch_id;
 
 // 캐릭터 디렉토리 생성
 @mkdir($character_image_path, G5_DIR_PERMISSION);
