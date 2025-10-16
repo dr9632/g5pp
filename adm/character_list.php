@@ -100,6 +100,7 @@ $colspan = 4;
 
                     <tr class="<?php echo $bg; ?>">
                         <td class="td_chk">
+                            <input type="hidden" name="ch_id[<?php echo $i ?>]" value="<?php echo $row['ch_id'] ?>" id="ch_id_<?php echo $i ?>">
                             <label for="chk_<?php echo $i; ?>" class="sound_only"><?php echo get_text($row['ch_name']) ?></label>
                             <input type="checkbox" name="chk[]" value="<?php echo $i ?>" id="chk_<?php echo $i ?>">
                         </td>
@@ -138,7 +139,7 @@ $colspan = 4;
 <?php echo get_paging(G5_IS_MOBILE ? $config['cf_mobile_pages'] : $config['cf_write_pages'], $page, $total_page, $_SERVER['SCRIPT_NAME'] . '?' . $qstr . '&amp;page='); ?>
 
 <script>
-    function fbcharacterlist_submit(f) {
+    function fcharacterlist_submit(f) {
         if (!is_checked("chk[]")) {
             alert(document.pressed + " 하실 항목을 하나 이상 선택하세요.");
             return false;
