@@ -3,7 +3,7 @@
 /* 아웃로그인 스킨 */
 .ol {position:relative;border:0px;margin-bottom:15px;border-radius:3px;height: 85px; padding: 2px 0px; width: 370px;background-image: linear-gradient(to right, #000000, transparent);}
 .ol h2 {width:117px;float:left;padding:15px 0;text-align:center}
-.ol .join {width:86px;float:right;padding:5px 0;text-align:center;background:#ff8b77;color:#fff; margin-top: 3px; margin-right: 12px; border-radius: 5px; height: 28px}
+.ol .join {width:86px;float:right;padding:5px 0;text-align:center;background:#ff8b77;color:#fff; margin-top: 3px; margin-right: 12px; border-radius: 5px; height: 28px; z-index: 3;}}
 .ol #ol_be_cate:after {display:block;visibility:hidden;clear:both;content:""}
 .ol form {padding:20px}
 .ol a.btn_admin {display:inline; padding:0 10px;height:25px;text-decoration:none;line-height:25px;vertical-align:middle} /* 관리자 전용 버튼 */
